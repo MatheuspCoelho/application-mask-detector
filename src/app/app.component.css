@@ -1,0 +1,25 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+}
+
+.video-section{
+  height: 60%;
+  width: 100%;
+}
+
+.frame-section{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.canvas-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
