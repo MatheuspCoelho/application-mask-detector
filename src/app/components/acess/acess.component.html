@@ -1,0 +1,18 @@
+<div class="result-container">
+  <div *ngIf="!acess" class="container-label">
+    <div class="iconbox svg-icon-cadeado">
+    </div>
+    <div class="labels-container">
+      <p class="label-negado">Acesso Negado</p>
+      <p class="label-negado-explicacao">Controle sanitário - Você está sem máscara</p>
+    </div>
+  </div>
+  <div *ngIf="acess" class="container-label">
+    <div class="iconbox svg-icon-cadeado-aberto">
+    </div>
+    <div class="labels-container">
+      <p class="label-permitido">Acesso permitido</p>
+      <p class="label-permitido-explicacao">Seja bem vindo - Você está com máscara!</p>
+    </div>
+  </div>
+</div>

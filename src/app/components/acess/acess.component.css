@@ -1,0 +1,78 @@
+
+.result-container{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconbox{
+  transform: rotate(-25deg);
+  width: 42px;
+  height: 36px;
+  display: flex;
+  margin-right: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.svg-icon-cadeado{
+  mask-image: url('../../../assets/cadeado-fechado.svg');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background-color: aliceblue;
+}
+
+.svg-icon-cadeado-aberto{
+  mask-image: url('../../../assets/cadeado-aberto.svg');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background-color: rgb(34, 252, 0);
+}
+
+.container-label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.label-negado{
+  color: aliceblue;
+  font-family: 'Roboto Medium';
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.label-negado-explicacao{
+  color: #696969;
+  font-family: 'Roboto Medium';
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0;
+}
+
+.label-permitido{
+  color: rgb(34, 252, 0);
+  font-family: 'Roboto Medium';
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.label-permitido-explicacao{
+  color: #00590f;
+  font-family: 'Roboto Medium';
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0;
+}
+
+.labels-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
