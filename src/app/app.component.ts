@@ -2,13 +2,14 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 
 import { NeuralClassifier } from './classNeuralClassifier';
 import { videoSizeInterface } from './interfaces/interfaces';
+import { CurAwait } from './utils/curAwait';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent extends CurAwait implements AfterViewInit {
 
   label = '';
   hasMask = false;
@@ -26,7 +27,10 @@ export class AppComponent implements AfterViewInit {
   private FPS = 10; // Frames da verificação
 
 
-  constructor (){ }
+  constructor (){
+    super();
+    this.cursorAwaitAdd();
+  }
 
   public videoElementRef: any;
   
@@ -41,7 +45,6 @@ export class AppComponent implements AfterViewInit {
     switch (caseValue) {
       case 1:
         this.getImage1 = func;
-        console.log(caseValue, func)
         break;
       case 2:
         this.getImage2 = func;
@@ -63,6 +66,7 @@ export class AppComponent implements AfterViewInit {
     this.isReady = true;
 
     setTimeout(()=>{
+      this.cursorAwaitRemove();
       this.startCapture();
     }, 2000)
   }

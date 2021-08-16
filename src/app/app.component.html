@@ -1,4 +1,4 @@
-<main class="main">
+<main class="main" id="main-body">
   <section
   id="sectionVideo"
   #sectionVideo
@@ -9,37 +9,10 @@
     (videoRef)=setVideoRef($event)
     [videoSize]="videoSize">
   </app-video>
-    <!-- <video
-      [class.show]="!isCaptured"
-      [class.hide]="isCaptured"
-      #video
-      id="video"
-      [width]="WIDTH"
-      [height]="HEIGHT"
-      autoplay
-    >
-    </video> -->
+
   </section>
   <section class="frame-section">
     <app-acess [setAcess]="hasMask"></app-acess>
-    <!-- <div class="result-container">
-      <div *ngIf="!hasMask" class="container-label">
-        <div class="iconbox svg-icon-cadeado">
-        </div>
-        <div class="labels-container">
-          <p class="label-negado">Acesso Negado</p>
-          <p class="label-negado-explicacao">Controle sanitário - Você está sem máscara</p>
-        </div>
-      </div>
-      <div *ngIf="hasMask" class="container-label">
-        <div class="iconbox svg-icon-cadeado-aberto">
-        </div>
-        <div class="labels-container">
-          <p class="label-permitido">Acesso permitido</p>
-          <p class="label-permitido-explicacao">Seja bem vindo - Você está com máscara!</p>
-        </div>
-      </div>
-    </div> -->
 
     <div class="canvas-container">
       <app-frame *ngIf="isReady" [videoElement]="videoElementRef" 
@@ -55,36 +28,4 @@
     </div>
 
   </section>
-  <!-- <div class="main">
-    <video
-      [class.show]="!isCaptured"
-      [class.hide]="isCaptured"
-      #video
-      id="video"
-      [width]="WIDTH"
-      [height]="HEIGHT"
-      autoplay
-    ></video>
-    <canvas
-      class="canvas"
-      [class.show]="isCaptured"
-      [class.hide]="!isCaptured"
-      #canvas
-      id="canvas"
-      [width]="WIDTH"
-      [height]="HEIGHT"
-    ></canvas>
-  </div> -->
-  
-  <!-- <div class="snap-container">
-    <button class="btn btn-primary" (click)="capture()">
-      Snap Photo
-    </button>
-  </div> -->
-
-  <!-- <div class="divResult" [ngClass]="hasMask ? 'mask' : 'noMask'">
-    {{label}}
-  </div> -->
 </main>
-
-<!-- <embed src="file.txt"> -->
